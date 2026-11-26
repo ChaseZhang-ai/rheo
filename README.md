@@ -31,7 +31,7 @@ python -m rheotrace gen --preset bimodal --seed 7 --out t.jsonl  # 生成合成�
 ## 开发
 
 ```bash
-pip install -e ".[dev]"
+pip install -e ".[dev,analysis]"
 ruff check .
 pytest
 ```
