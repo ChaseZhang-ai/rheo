@@ -49,8 +49,8 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"  E {i}")
             for w in rep.warnings:
                 print(f"  W {w}")
-            if not rep.ok:
-                rc = 1
+            if not rep.ok and not args.lenient:
+                rc = 1  # --lenient：数据问题只报告不拒绝（合同见 --help 文案）
         return rc
 
     overrides = {
